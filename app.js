@@ -47,6 +47,8 @@ function gotStream(stream) {
     dataArray = new Uint8Array(bufferLength);
 	document.body.appendChild(app.view);
 	
+	// Add capacity for more files here
+	
 	PIXI.loader
 	.add("logo1", "logo1.png")
 	.add("logo2", "logo2.png")
