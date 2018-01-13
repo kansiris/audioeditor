@@ -1,2 +1,2 @@
-install: npm install electron-packager --save-dev
+install: npm install -g electron-packager
 script: electron-packager repo audio --platform=win32 --arch=ia32
