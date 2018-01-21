@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 400, height: 500})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -55,6 +55,11 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
 ipc.on('openAppFolder', function (event, arg) {
 	shell.showItemInFolder(app.getAppPath());
+})
+
+ipc.on('setLoadNumber', function (event, arg) {
+	global.loadNumber = arg;
 })

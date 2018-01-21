@@ -19,6 +19,8 @@ var logo;
 var back;
 var currentLogo = 1;
 
+var loadNumber = parseInt(remote.getGlobal("loadNumber"));
+
 try {
     navigator.mediaDevices.getUserMedia(
     {
@@ -47,14 +49,13 @@ function gotStream(stream) {
     dataArray = new Uint8Array(bufferLength);
 	document.body.appendChild(app.view);
 	
-	// Add capacity for more files here
+	for (i=1; i < (loadNumber+1); i++) {
+		PIXI.loader
+		.add("logo" + i, "usr/logo" +i+ ".png")
+		.add("back" + i, "usr/back" +i+ ".png");
+	}
 	
-	PIXI.loader
-	.add("logo1", "logo1.png")
-	.add("logo2", "logo2.png")
-	.add("back1", "back1.png")
-	.add("back2", "back2.png")
-	.load(setup);
+	PIXI.loader.load(setup);
 	
 	window.addEventListener("keypress", keypress);
 }
