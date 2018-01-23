@@ -1,7 +1,7 @@
 # daem-on/audio
 A JavaScript audio visualizer using Electron, PixiJS and WebAudio
 ### Usage
-Build with Electron, and include assets in the same directory as app.js. Assets should be named *logo1*, *logo2* etc. and *back1*, *back2*, etc. Edit app.js to add capacity for more images. Start the app with the desired input device selected as default in the operating system's audio inputs panel. Control the application with the keys listed under *controls*.
+Build with Electron, and include assets in *usr* directory. Assets should be named *logo1*, *logo2* etc. and *back1*, *back2*, etc. Start the app with the desired input device selected as default in the operating system's audio inputs panel. Control the application with the keys listed under *controls*.
 ### Controls
 | Key | Description |
 | ---- | ---- |
