@@ -63,3 +63,11 @@ ipc.on('openAppFolder', function (event, arg) {
 ipc.on('setLoadNumber', function (event, arg) {
 	global.loadNumber = arg;
 })
+
+ipc.on('setVideoMode', function (event, arg) {
+	global.videoMode = arg;
+})
+
+ipc.on('setSampleByte', function (event, arg) {
+	global.sampleByte = arg;
+})
