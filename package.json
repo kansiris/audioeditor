@@ -11,7 +11,7 @@
   "author": "Daemon",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~7.2.4"
   },
   "dependencies": {
     "pixi.js": "^4.6.2"
